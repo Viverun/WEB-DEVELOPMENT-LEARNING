@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=-, initial-scale=1.0" />
+    <title>Conflicting Property</title>
+    <style>
+      /* The speceficity of this selector is 1 */
+      h1 {
+        color: aqua;
+      }
+
+      /* The speceficity of this selector is 100 */
+
+      #donotputnumericals {
+        color: green;
+      }
+
+      /* The speceficity of this selector is 10 */
+      .cred {
+        color: red;
+      }
+
+      /* The speceficity of this selector is (10 + 1)x10 = 101 because it contains element, class as well as importance selector */
+
+      h1.cblue {
+        color: blue !important;
+      }
+
+      /* The speceficity of this selector is 10 but as it is the last in the tag it will be prioritize among the other 10 speceficity selectors */
+
+      .cpink {
+        color: rebeccapurple;
+      }
+
+      /* The speceficity of this selector is 10 */
+      [data-x="a"] {
+        color: brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- The speceficity of this selector is 1000 (Inline Selector) */ 
+
+    <!--If we use an inline selector then it is going to consider it before anything
+     style = "color: orange; " -->
+    <h1 class="cred cblue cpink" data-x="a" id="donotputnumericals">
+      CSS Speceficity
+    </h1>
+  </body>
+</html>
+<!-- Inline Selector > ID Selector > Class or Attribute Selector > ELement Selector > Universal Selector -->
+<!-- The speceficity increases by 10 folds if you use "!immportant" -->
+
+
+
+    <!-- Exaample 
+     The speceficity of this selector is 1 + 10 + 10 + 10(due to attribute) + 10(pseudo-class) (Inline Selector)
+     a.jimclass.mount-class[href]:hover{
+     color : red;
+     }
+     
+     */ 
+
+

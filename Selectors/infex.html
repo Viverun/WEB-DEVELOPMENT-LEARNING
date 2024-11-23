@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Class Selector */
+        .yellow {
+            background-color: yellow;
+        }
+        
+        /* Child Selector */
+
+        /* div > p{
+            background-color: rgb(101, 212, 175);
+            color: rebeccapurple;
+        }
+ */
+
+        /* ID Selector */
+        #Brown{
+            color: brown;
+        }
+
+
+        /* Pseudo Selectors */
+
+        a:link {
+            color: gold;
+        }
+
+        a:visited {
+            color: gray;
+        }
+
+        a:active {
+            background-color: black;
+            color: white;
+        }
+
+        a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        p:first-child {
+            background: olivedrab;
+        }
+
+        div p {
+            background-color: blueviolet;
+            color: red;
+        }
+
+        /* Universal Selector */
+        /* *{
+            background-color: black;
+            color: white;
+        } */
+    </style>
+</head>
+
+<body>
+    <main class="Selecting">
+
+        <p>First Child</p>
+
+        <p>Second Child</p>
+    </main>
+    <div class="yellow">
+        Selectors
+    </div>
+    <div>
+        <article>
+            <p>Is this is also a first child of p?</p>
+            <p> This is a paragraph in div</p>
+        </article>
+    </div>
+    <a href="https://google.com">Google</a>
+    <div>
+        <a href="https://youtube.com">Youtube</a>
+    </div>
+    <div id="Brown">ID Selector</div>
+</body>
+
+</html>

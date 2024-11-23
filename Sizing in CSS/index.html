@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing in CSS</title>
+    <style>
+        .box{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            border: 5px solid black;
+            /* width: 1520px; */
+            /* width: 100vw; */
+            width: 80vw;
+            margin:auto;
+            background-color:slategrey;
+        }
+        .boxy{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            border: 5px solid black;
+            /* width: 1520px; */
+            /* width: 100vw; */
+            width: 80vw;
+            /* margin:auto; */
+            margin: 80vh;
+            background-color:slategrey;
+        }
+        .pox{
+            padding:0;
+            /* margin: 0; */
+            box-sizing: border-box;
+            border: 5px solid black;
+            /* width: 1520px; */
+            /* width: 100vw; */
+            width: 80vw;
+            /* margin:auto; */
+            margin: 23px auto;
+            height: 80vh;
+            background-color:slategrey;
+        }
+        .pox{
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hi this is Div</div>
+    <span class="boxy">Hi this is Span</span>
+    <!-- As this in an inline element, sizing properties won't affect this -->
+    <div class="pox"><p>lorem22</p></div>
+
+</body>
+</html>
